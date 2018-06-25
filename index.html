@@ -140,9 +140,18 @@
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
+                        <!-- Resolution switching -->
+                        <img srcset="./img/nat-1.jpg 300w, ./img/nat-1-large.jpg 1000w" sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px"
+                            class="composition__photo composition__photo--p1" src="./img/nat-1-large.jpg" alt="Photo-1">
+                        <img srcset="./img/nat-2.jpg 300w, ./img/nat-2-large.jpg 1000w" sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px"
+                            class="composition__photo composition__photo--p2" src="./img/nat-2-large.jpg" alt="Photo-2">
+                        <img srcset="./img/nat-3.jpg 300w, ./img/nat-3-large.jpg 1000w" sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px"
+                            class="composition__photo composition__photo--p3" src="./img/nat-3-large.jpg" alt="Photo-3">
+                        <!-- 
                         <img src="./img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
                         <img src="./img/nat-2-large.jpg" alt="photo 2" class="composition__photo composition__photo--p2">
                         <img src="./img/nat-3-large.jpg" alt="photo 3" class="composition__photo composition__photo--p3">
+                         -->
                     </div>
                 </div>
             </div>
@@ -400,7 +409,18 @@
     </main>
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="./img/logo-green-2x.png" alt="FUll logo" class="footer__logo">
+
+            <!-- Art switching => switching images om screen width (with Density switching)  -->
+
+            <picture class="footer__logo">
+                <source srcset="./img/logo-green-small-1x.png 1x, ./img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+                <!-- Density switching -->
+                <img srcset="./img/logo-green-1x.png 1x , ./img/logo-green-2x.png 2x" alt="FUll logo">
+            </picture>
+
+
+            <!-- Density switching -->
+            <!-- <img srcset="./img/logo-green-1x.png 1x , ./img/logo-green-2x.png 2x" alt="FUll logo" class="footer__logo"> -->
         </div>
         <div class="row">
             <div class="col-1-of-2">
